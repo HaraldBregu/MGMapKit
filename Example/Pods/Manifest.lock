@@ -1,0 +1,16 @@
+PODS:
+  - MGMapKit (0.1.0)
+
+DEPENDENCIES:
+  - MGMapKit (from `../`)
+
+EXTERNAL SOURCES:
+  MGMapKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MGMapKit: 0b5609bc6fc19e1896ca005324f762cc5fdac038
+
+PODFILE CHECKSUM: 851f76b043cdd85ceaafaef87281da7ceea8ee28
+
+COCOAPODS: 1.6.1
