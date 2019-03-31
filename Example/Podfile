@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'MGMapKit_Example' do
+  pod 'MGMapKit', :path => '../'
+
+end
