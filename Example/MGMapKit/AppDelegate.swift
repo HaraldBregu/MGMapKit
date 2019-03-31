@@ -7,18 +7,13 @@
 //
 
 import UIKit
-<<<<<<< HEAD
 import MGMapKit
-=======
->>>>>>> d49f71f267afbd22b476e0c5a4754cb6a0f9ad35
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-<<<<<<< HEAD
     var map:MGMap!
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -26,13 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         map = MGMap(mapData: data)
         window?.rootViewController = UINavigationController(rootViewController: map.controller)
         window?.makeKeyAndVisible()
-
-=======
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
->>>>>>> d49f71f267afbd22b476e0c5a4754cb6a0f9ad35
         return true
     }
 

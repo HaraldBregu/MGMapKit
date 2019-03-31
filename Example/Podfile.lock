@@ -1,5 +1,4 @@
 PODS:
-<<<<<<< HEAD
   - Cosmos (18.0.1)
   - MGMapKit (0.1.0):
     - Cosmos (~> 18.0)
@@ -7,36 +6,24 @@ PODS:
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
-=======
-  - MGMapKit (0.1.0)
->>>>>>> d49f71f267afbd22b476e0c5a4754cb6a0f9ad35
 
 DEPENDENCIES:
   - MGMapKit (from `../`)
 
-<<<<<<< HEAD
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Cosmos
     - SDWebImage
 
-=======
->>>>>>> d49f71f267afbd22b476e0c5a4754cb6a0f9ad35
 EXTERNAL SOURCES:
   MGMapKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-<<<<<<< HEAD
   Cosmos: 7dfaa3f52584ca5f94ab74b5c2e264019cc9f7f5
   MGMapKit: cc00b97bd5a3cf6220b36b5190a2ad75e72b47aa
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
-PODFILE CHECKSUM: 063323a01a0dbad3d55b192d2a5a2d1774a56a4e
-=======
-  MGMapKit: 0b5609bc6fc19e1896ca005324f762cc5fdac038
-
-PODFILE CHECKSUM: 851f76b043cdd85ceaafaef87281da7ceea8ee28
->>>>>>> d49f71f267afbd22b476e0c5a4754cb6a0f9ad35
+PODFILE CHECKSUM: 93c92f469249f66a9e4efdc3c7b4545dc206d1f3
 
 COCOAPODS: 1.6.1

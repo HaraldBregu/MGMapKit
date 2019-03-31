@@ -2,13 +2,4 @@ use_frameworks!
 
 target 'MGMapKit_Example' do
   pod 'MGMapKit', :path => '../'
-
-<<<<<<< HEAD
-=======
-  target 'MGMapKit_Tests' do
-    inherit! :search_paths
-
-    
-  end
->>>>>>> d49f71f267afbd22b476e0c5a4754cb6a0f9ad35
 end
