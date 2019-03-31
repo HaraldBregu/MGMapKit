@@ -1,6 +1,6 @@
 PODS:
   - Cosmos (18.0.1)
-  - MGMapKit (0.1.0):
+  - MGMapKit (0.1.1):
     - Cosmos (~> 18.0)
     - SDWebImage
   - SDWebImage (4.4.6):
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Cosmos: 7dfaa3f52584ca5f94ab74b5c2e264019cc9f7f5
-  MGMapKit: cc00b97bd5a3cf6220b36b5190a2ad75e72b47aa
+  MGMapKit: 5792fea004dcf0c663f8443f3cfe4be4c9e8fd0a
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
 PODFILE CHECKSUM: 93c92f469249f66a9e4efdc3c7b4545dc206d1f3
