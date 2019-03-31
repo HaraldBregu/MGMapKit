@@ -1,9 +1,15 @@
 {
   "name": "MGMapKit",
   "version": "0.1.0",
+<<<<<<< HEAD
   "summary": "When you sit down to work, external critics aren’t",
   "description": "When you sit down to work, external critics aren’t the enemy. It’s you who you must to fight against to do great fucking work. You must overcome yourself. Saul Bass on failure: Failure is built into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’ then one must expect and accept the fucking possibility of failure.",
   "homepage": "https://github.com/HaraldBregu/",
+=======
+  "summary": "A short description of MGMapKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/AldoOS/MGMapKit",
+>>>>>>> d49f71f267afbd22b476e0c5a4754cb6a0f9ad35
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,6 +18,7 @@
     "AldoOS": "harald.bregu@gmail.com"
   },
   "source": {
+<<<<<<< HEAD
     "git": "https://github.com/HaraldBregu/MGMapKit.git",
     "tag": "0.1.0"
   },
@@ -33,4 +40,13 @@
 
     ]
   }
+=======
+    "git": "https://github.com/AldoOS/MGMapKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MGMapKit/Classes/**/*"
+>>>>>>> d49f71f267afbd22b476e0c5a4754cb6a0f9ad35
 }
