@@ -13,6 +13,4 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
       'MGMapKit' => ['MGMapKit/Assets/*.{png,lproj,storyboard}']
   }
-  s.dependency 'Cosmos', '~> 18.0'
-  s.dependency 'SDWebImage'
 end
