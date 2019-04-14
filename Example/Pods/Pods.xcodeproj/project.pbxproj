@@ -19,7 +19,6 @@
 		19F37516DD1483D4DD6BB32257B7059A /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 725BB3561B2CC1C44D572A8D3EACBB93 /* UIImageView+HighlightedWebCache.m */; };
 		29E1ADD749E2B64BEF3500AA1CFEA152 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C4CA3E62A9333055D4B6CE70E6A58 /* RightToLeft.swift */; };
 		2B9E82CBAC9EEF9D84F6E039DA927712 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6093B106F235E5064CB3A7F728D4E499 /* CosmosSize.swift */; };
-		2F855472C83CF8E76616F6D22E0F97B9 /* MGMapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8527BCAF183B40092E7B2FDC1A673 /* MGMapData.swift */; };
 		3286ECE08DFB8814AFDFCE0F490FB857 /* MGMapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC2DAFCC8FC8AEADCA3CBB391DD26D71 /* MGMapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B5D9DF0CD9EB171CEDB332566E1210 /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9303F7463FE812F9F9B907987FC5D5B5 /* SDWebImageCoder.m */; };
 		32E59BA38F48A39B0EB9FAA2EBA1F274 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 536C907C3299B00AFD03B7F5E05E4BC7 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +60,8 @@
 		9E9056503E5D391B8E03A444499DFDBA /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BD22EDADFD0A6B26D281BBC8BC952AEA /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0466305C657DA6C5003A477181FFBB2 /* SDWebImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C9B41BA4AA896B2E2F794691332AC9 /* SDWebImageGIFCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A83D20BC1E5A7FDD224F0C5077C2A091 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC02B0AEE82D55E1488DDF082259D5 /* CosmosDefaultSettings.swift */; };
+		A919963F2263744300054648 /* MGMapControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919963E2263744300054648 /* MGMapControllerDelegate.swift */; };
+		A91996412263746200054648 /* MGMapControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91996402263746200054648 /* MGMapControllerDataSource.swift */; };
 		AB399B718ACB0FF6184CC80652BBD26D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FF8DDA9DB1E2620570432E898784A3 /* Foundation.framework */; };
 		AEB2C02D8442D9F611D4189B0A3033A2 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E40DA538586380B9C2ED13375251D9 /* UIImage+MultiFormat.m */; };
 		B3E726443B76031CCB4F50199399173A /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FBF7513D79C98779C637D3A98C37CD /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,7 +72,6 @@
 		C61BDB99524BB68DB85ADC557689019A /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FCFC9EA1B556932F6203E5E4D67D34C6 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC3351CA6193585BB0B21B8BD14A3E42 /* SDWebImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB87570060B2C8C7FAC1ABA6186D87B /* SDWebImageFrame.m */; };
 		CCA11A61D45D177BDD8F3AB5C1FDFBB3 /* SDWebImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F1AAC4AA0279BAF09205508ABF1999 /* SDWebImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE7721DA2D6EA1EEBE5C799E30FD5E1F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0670EAB0FD1090DFFDF623F9B2E46E3 /* ReplaceMe.swift */; };
 		D093F9602BCD458D4B77DAF403ABC32C /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C133152D240D0196C4C86A70FB2C50 /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D32EDABDB35D680162F24D8F7B3E9910 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E0509CFBD5ED6804F3C9BB3422D873 /* CosmosTouch.swift */; };
 		D5019423CE35560255E298D59511BD79 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D35CC4AE14D452FDA1446BCD83E30BD4 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -146,21 +146,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01BE1898A38021CF461E5D4F0A2A98DF /* MGMapKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MGMapKit.bundle; path = "MGMapKit-MGMapKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01BE1898A38021CF461E5D4F0A2A98DF /* MGMapKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MGMapKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		038E76821F42D140586B46595C770E79 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		04A698DD5A5CAC804DA9BDA1A250D5C5 /* Pods-MGMapKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGMapKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		0692F809E0801E7D7B6F431D8C04CF23 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
 		0ADF2E64BDA24B868270AE1044525047 /* Pods-MGMapKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MGMapKit_Example.modulemap"; sourceTree = "<group>"; };
 		0B424B27728FFB710FBE20D1BE03923C /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
 		0B7D214622946BCA997944077E29574A /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
-		0D8FBF96F69F8436CE2A478DC2138D7A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D8FBF96F69F8436CE2A478DC2138D7A /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A6791B848FF9A2BAB11BB43F87749A /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
 		16059F5F6ACFA6476A27C9E9E432899F /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/SDWebImageTransition.h; sourceTree = "<group>"; };
 		168B34A0BFF2B4C3858DF690F0F24143 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		1B883DC3985F61BC2A7A8082816F487F /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
 		1C65D8D287FEABC9901BC5D76C907C9D /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		1C9FC973FE0CD915CF8F34248C9385B2 /* UIImage+MemoryCacheCost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MemoryCacheCost.m"; path = "SDWebImage/UIImage+MemoryCacheCost.m"; sourceTree = "<group>"; };
-		1EB8527BCAF183B40092E7B2FDC1A673 /* MGMapData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGMapData.swift; path = MGMapKit/Classes/MGMapData.swift; sourceTree = "<group>"; };
 		1EEC02B0AEE82D55E1488DDF082259D5 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
 		233533344F475727AD8D0B208A107B7D /* MGMapController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGMapController.swift; path = MGMapKit/Classes/MGMapController.swift; sourceTree = "<group>"; };
 		248EF450A3E943579F3107B599CF4F61 /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "SDWebImage/NSImage+WebCache.h"; sourceTree = "<group>"; };
@@ -168,7 +167,7 @@
 		2AA9B313DF3C1F0FE756840C31832588 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
 		2AF62BA26E0C7F4E8BEE5B20ED7C4350 /* ResourceBundle-MGMapKit-MGMapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MGMapKit-MGMapKit-Info.plist"; sourceTree = "<group>"; };
 		2C4F93A1AFF1543D5141DE5F597F9FB3 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
-		2CC47328F4B63435DA4174F8D2A26026 /* Pods_MGMapKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MGMapKit_Example.framework; path = "Pods-MGMapKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC47328F4B63435DA4174F8D2A26026 /* Pods_MGMapKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGMapKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD6EA692E323753988D96921B7C9928 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E0E1221CF9A27005E5050329A8CE06C /* MGMapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MGMapKit-Info.plist"; sourceTree = "<group>"; };
 		2EEB9FE058D6298385C7094E19321006 /* MGMapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MGMapKit.modulemap; sourceTree = "<group>"; };
@@ -177,7 +176,7 @@
 		35ECAB03F7D1B6D5A3A97AD97D2539C1 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
 		374A94B3E57FF9C3F87FA22B67B3EF5D /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EE3883D7F557231351A827A0BC07D5 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
-		3EE17D095BB10BB3FC5721305CCC580E /* MGMapKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MGMapKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3EE17D095BB10BB3FC5721305CCC580E /* MGMapKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MGMapKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		42DF58DCEF37114948ECC21C1F70693A /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
 		457FBDCE2065661538FB70C83B48D9A2 /* UIImage+MemoryCacheCost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MemoryCacheCost.h"; path = "SDWebImage/UIImage+MemoryCacheCost.h"; sourceTree = "<group>"; };
 		4752690D1F3D25195EBEE8142E4CCFF4 /* Pods-MGMapKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MGMapKit_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -194,7 +193,7 @@
 		681E5788F9069E540F1AD1C69D5F0DD0 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		6AF7914210219F67711E39D763B866C3 /* Pods-MGMapKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGMapKit_Example-dummy.m"; sourceTree = "<group>"; };
 		6E0008BCADA36AF5A9DA5281D4C1B8BC /* SDWebImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDWebImage-Info.plist"; sourceTree = "<group>"; };
-		6E5C45AB49903C35752618C5E8DCFB31 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6E5C45AB49903C35752618C5E8DCFB31 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6FAF18BE0514D6D175D355A74D08ED78 /* NSButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSButton+WebCache.h"; path = "SDWebImage/NSButton+WebCache.h"; sourceTree = "<group>"; };
 		725BB3561B2CC1C44D572A8D3EACBB93 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		72C915CC9FFE9F693971A4C4366EBA01 /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
@@ -202,7 +201,7 @@
 		76EFB52A4E32AA00932F9901F20931FD /* Pods-MGMapKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MGMapKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		76F757DA9862F4269D8A0E5CCDA3515A /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/SDAnimatedImageRep.m; sourceTree = "<group>"; };
 		840F4F7DAB45196D545AA0A0AB21375A /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
-		8B7C3D085E76A07FB079BC3C30043BF3 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7C3D085E76A07FB079BC3C30043BF3 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3C4CA3E62A9333055D4B6CE70E6A58 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
 		8DF8C1F6A673FADC334D0538FB9E3062 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		8E951594B02B22B43F061F15B717738D /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
@@ -213,13 +212,15 @@
 		99B8F12E5EC83AC87E54359669772AC4 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
 		9B0E5486889D38B6AEEF31F20EF1A30F /* Pods-MGMapKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGMapKit_Example-Info.plist"; sourceTree = "<group>"; };
 		9D17FE95CBB1ED80B5EE4F0222200746 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A606022242C6D45BEF5BCE49BBF11713 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
 		A6F1AAC4AA0279BAF09205508ABF1999 /* SDWebImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCoder.h; path = SDWebImage/SDWebImageCoder.h; sourceTree = "<group>"; };
 		A6FBF7513D79C98779C637D3A98C37CD /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		A8719A09BF4B4594F1BCE67E32E15E82 /* SDWebImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCodersManager.m; path = SDWebImage/SDWebImageCodersManager.m; sourceTree = "<group>"; };
 		A88641662213BBECBFB8A5521223C0C5 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
 		A8E0509CFBD5ED6804F3C9BB3422D873 /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
+		A919963E2263744300054648 /* MGMapControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MGMapControllerDelegate.swift; path = MGMapKit/Classes/MGMapControllerDelegate.swift; sourceTree = "<group>"; };
+		A91996402263746200054648 /* MGMapControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MGMapControllerDataSource.swift; path = MGMapKit/Classes/MGMapControllerDataSource.swift; sourceTree = "<group>"; };
 		A9FFF20D82A3856FCBF6770E86AA6890 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
 		AC2DAFCC8FC8AEADCA3CBB391DD26D71 /* MGMapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGMapKit-umbrella.h"; sourceTree = "<group>"; };
 		AD4340502FC166C4B86ACBFC1212BC9F /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
@@ -230,7 +231,6 @@
 		BD22EDADFD0A6B26D281BBC8BC952AEA /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		BE95A25B7BDB29C0E1A84CEC0E18FAB9 /* Pods-MGMapKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGMapKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BF9F7DC45EEEE209833DC9612FF8FE8A /* SDWebImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageGIFCoder.m; path = SDWebImage/SDWebImageGIFCoder.m; sourceTree = "<group>"; };
-		C0670EAB0FD1090DFFDF623F9B2E46E3 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = MGMapKit/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		C1C133152D240D0196C4C86A70FB2C50 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		C21E5E3A789D2EAD697AF109E62B20BF /* Pods-MGMapKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGMapKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C38CDEB41ABC76E454C7DA08BD9291B5 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cosmos.modulemap; sourceTree = "<group>"; };
@@ -243,11 +243,11 @@
 		D35CC4AE14D452FDA1446BCD83E30BD4 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
 		D4966EB202EA6F11EEE055571B8F1A20 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		D4BE78D9E0E326895CA9B69EA53B7F11 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
-		D5935C5DA5CB0A2CA09423C928C94D27 /* MGMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MGMapKit.framework; path = MGMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5935C5DA5CB0A2CA09423C928C94D27 /* MGMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MGMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F711D2935ACE16471081C67F8FD873 /* MGMap.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = MGMap.storyboard; path = MGMapKit/Assets/MGMap.storyboard; sourceTree = "<group>"; };
 		D9FF8DDA9DB1E2620570432E898784A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DACF6DBBCC3D71B7D66A00D3293C8755 /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/SDAnimatedImageRep.h; sourceTree = "<group>"; };
-		DC42825CA4EDABC116EF391B6958BC70 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		DC42825CA4EDABC116EF391B6958BC70 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD19B9B4D2032971AA74939FAFBFA6C7 /* SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-umbrella.h"; sourceTree = "<group>"; };
 		E0ED775B38BE60DD0E965528DC0A3F8D /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
 		E23318B6B4AF616DF551EC81D23062F2 /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
@@ -344,8 +344,8 @@
 			children = (
 				97B37E28BB26EC566AC0F43DE4040730 /* MGMap.swift */,
 				233533344F475727AD8D0B208A107B7D /* MGMapController.swift */,
-				1EB8527BCAF183B40092E7B2FDC1A673 /* MGMapData.swift */,
-				C0670EAB0FD1090DFFDF623F9B2E46E3 /* ReplaceMe.swift */,
+				A919963E2263744300054648 /* MGMapControllerDelegate.swift */,
+				A91996402263746200054648 /* MGMapControllerDataSource.swift */,
 				7E105040F58C4D45AD24B0D25C929906 /* Pod */,
 				A6B7384F5B5B6C8E7C046834CF82E316 /* Resources */,
 				2B735E29F4C1D4D70955EC67B12E7882 /* Support Files */,
@@ -408,7 +408,6 @@
 				B560BD68B993D7409D5F0E01A9034F9A /* StarLayer.swift */,
 				10BDCFCA8D701B15DACC4478CDE311DA /* Support Files */,
 			);
-			name = Cosmos;
 			path = Cosmos;
 			sourceTree = "<group>";
 		};
@@ -563,7 +562,6 @@
 				BC2C83B82AA93FA9915E835EA7C73F45 /* Core */,
 				A0F0C09DAF83A26F82CF4C45128B6A75 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -742,6 +740,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -818,11 +817,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A91996412263746200054648 /* MGMapControllerDataSource.swift in Sources */,
 				82D34B7E0C5100FEB5250CC24C4FD7EB /* MGMap.swift in Sources */,
+				A919963F2263744300054648 /* MGMapControllerDelegate.swift in Sources */,
 				3AC016E8C7601B621B5B00059E52BBA4 /* MGMapController.swift in Sources */,
-				2F855472C83CF8E76616F6D22E0F97B9 /* MGMapData.swift in Sources */,
 				D5EBC337C6143F84BF4BD61DF20AEF87 /* MGMapKit-dummy.m in Sources */,
-				CE7721DA2D6EA1EEBE5C799E30FD5E1F /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,8 +1260,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

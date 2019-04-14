@@ -10,16 +10,96 @@ import UIKit
 import MGMapKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MGMapControllerDataSource, MGMapControllerDelegate {
+    
+    func controller(_ controller: MGMapController, didTapBarButtonItem barButtonItem: UIBarButtonItem) {
+        print("Navigation item is: \(String(describing: barButtonItem.accessibilityIdentifier))")
+    }
+    
+    func leftBarButtonItems(_ controller: MGMapController) -> [UIBarButtonItem] {
+        let button1 = UIBarButtonItem()
+        button1.image = #imageLiteral(resourceName: "menu")
+        button1.style = .plain
+        button1.accessibilityIdentifier = "First"
+        
+        let button2 = UIBarButtonItem()
+        button2.image = #imageLiteral(resourceName: "menu")
+        button2.style = .plain
+        button2.accessibilityIdentifier = "Second"
+        
+        return [button1, button2]
+    }
+    
+    var items: [MGMap] {
+        var items:[MGMap] = []
+        
+        let london = MGMap()
+        london.location = "London"
+        london.latitude = 51.507222
+        london.longitude = -0.1275
+        items.append(london)
+        
+        let berlin = MGMap()
+        berlin.location = "Berlin"
+        berlin.latitude = 52.520008
+        berlin.longitude = 13.404954
+        items.append(berlin)
 
+        let lyon = MGMap()
+        lyon.location = "Lyon"
+        lyon.latitude = 45.74846
+        lyon.longitude = 4.84671
+        items.append(lyon)
+        
+        let madrid = MGMap()
+        madrid.location = "Madrid"
+        madrid.latitude = 40.416775
+        madrid.longitude = -3.703790
+        items.append(madrid)
+        
+        let milano = MGMap()
+        milano.location = "Milano"
+        milano.latitude = 45.46427
+        milano.longitude = 9.18951
+        items.append(milano)
+        
+        let durres = MGMap()
+        durres.location = "Durrës"
+        durres.latitude = 41.32306
+        durres.longitude = 19.44139
+        items.append(durres)
+
+        return items
+        
+    }
+    
     var window: UIWindow?
     var map:MGMap!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let data = MGMapData(latitude: 21.282778, longitude: -157.829444)
-        map = MGMap(mapData: data)
-        window?.rootViewController = UINavigationController(rootViewController: map.controller)
+
+        let controller = MGMapController.controller
+        controller.dataSource = self
+        
+        let asset = MGAsset()
+        
+        let string = MGString()
+        string.title = "My Location"
+        asset.string = string
+    
+        let color = MGColor()
+        color.backgroundView = .black
+        color.navigationBar = .black
+        color.navigationBarTint = .white
+        color.toolBar = .black
+        color.toolBarTint = .white
+        asset.color = color
+
+        controller.asset = asset
+        
+        window?.rootViewController = UINavigationController(rootViewController: controller)
+
         window?.makeKeyAndVisible()
         return true
     }
