@@ -11,6 +11,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		71E1B46D03AEF901B1046D64 /* Pods_MGMapKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F970861BD5023AF1A472C18C /* Pods_MGMapKit_Example.framework */; };
+		A917C765226B642F00C1D1AF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917C764226B642F00C1D1AF /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		782EBBE4810366AF6CE9C945 /* Pods-MGMapKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGMapKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-MGMapKit_Example/Pods-MGMapKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7F606D0D22CB28831C74DE36 /* Pods-MGMapKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGMapKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MGMapKit_Tests/Pods-MGMapKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7CA4CFD6D210F1DCC0B58E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A917C764226B642F00C1D1AF /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		DAFD73E495465B161FED6F8D /* Pods_MGMapKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGMapKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CF7DDB7F1ACC4B2952B648 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F970861BD5023AF1A472C18C /* Pods_MGMapKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGMapKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				A917C764226B642F00C1D1AF /* Assets.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A917C765226B642F00C1D1AF /* Assets.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

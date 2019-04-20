@@ -1,7 +1,7 @@
 // 
-//  MGMap.swift
+//  Assets.swift
 //
-//  Created by harald bregu on 31/03/2019.
+//  Created by harald bregu on 20/04/2019.
 //  Copyright © 2019 Dream Building Company. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,39 +24,58 @@
 //
 
 import Foundation
-import MapKit
+import MGMapKit
 
-public class MGMap {
-    public var location:String!
-    public var latitude: CLLocationDegrees!
-    public var longitude: CLLocationDegrees!
-    public init() {}
+
+class Assets {}
+extension Assets:MapKitAsset {}
+
+protocol MapKitAsset {
+    static var assets:MapAsset { get }
 }
 
-public protocol MGMapAsset {
-    var string:MGMapString { get set }
-    var font:MGMapFont { get set }
-    var image:MGMapImage { get set }
-    var color:MGMapColor { get set }
+extension MapKitAsset {
+    static var assets:MapAsset {
+        return MapAsset(
+            string: MapString(
+                title: "My Location",
+                navigationTitle: "My Location"),
+            font: MapFont(),
+            image: MapImage(),
+            color: MapColor(
+                backgroundView: .black,
+                navigationBar: .black,
+                navigationBarTint: .white,
+                toolBar: .black,
+                toolBarTint: .white))
+    }
 }
 
-public protocol MGMapString {
-    var title:String { get set }
-    var navigationTitle:String { get set }
+
+struct MapAsset:MGMapAsset {
+    var string: MGMapString
+    var font: MGMapFont
+    var image: MGMapImage
+    var color: MGMapColor
 }
 
-public protocol MGMapFont {
-    
+struct MapString:MGMapString {
+    var title:String
+    var navigationTitle:String
 }
 
-public protocol MGMapImage {
+struct MapFont:MGMapFont {
 
 }
 
-public protocol MGMapColor {
-    var backgroundView:UIColor { get set }
-    var navigationBar:UIColor { get set }
-    var navigationBarTint:UIColor { get set }
-    var toolBar:UIColor { get set }
-    var toolBarTint:UIColor { get set }
+struct MapImage:MGMapImage {
+
+}
+
+struct MapColor:MGMapColor {
+    var backgroundView:UIColor
+    var navigationBar:UIColor
+    var navigationBarTint:UIColor
+    var toolBar:UIColor
+    var toolBarTint:UIColor
 }
