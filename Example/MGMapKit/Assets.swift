@@ -86,7 +86,10 @@ extension MapKitAsset {
                 navigationBarTint: .white,
                 toolBar: .black,
                 toolBarTint: .white),
-            data: MapData(items: items))
+            data: MapData(
+                items: items,
+                enableAds: false,
+                adsUnitId: ""))
     }
 }
 
@@ -121,4 +124,6 @@ struct MapColor:MGMapColor {
 
 struct MapData:MGMapData {
     var items: [MGMapDataItem]
+    var enableAds: Bool
+    var adsUnitId: String
 }

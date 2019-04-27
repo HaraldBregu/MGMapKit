@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: MGMapControllerDataSource, MGMapControllerDelegate {
     
-    func leftBarButtonItems(_ controller: MGMapController) -> [UIBarButtonItem] {
+    func leftBarButtonItems(_ controller: UIViewController) -> [UIBarButtonItem] {
        
         let button1 = UIBarButtonItem()
         button1.image = #imageLiteral(resourceName: "menu")
@@ -46,7 +46,7 @@ extension AppDelegate: MGMapControllerDataSource, MGMapControllerDelegate {
         return [button1, button2]
     }
     
-    func controller(_ controller: MGMapController, didTapBarButtonItem barButtonItem: UIBarButtonItem) {
+    func controller(_ controller: UIViewController, didTapBarButtonItem barButtonItem: UIBarButtonItem) {
         print("Navigation item is: \(String(describing: barButtonItem.accessibilityIdentifier))")
     }
     
