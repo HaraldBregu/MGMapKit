@@ -12,9 +12,5 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
       'MGMapKit' => ['MGMapKit/Assets/*.{png,lproj,storyboard}']
   }
-  s.dependency 'SnapKit', '~> 4.0.0'
-  s.static_framework = true
-  s.dependency 'Firebase/Core'
-  s.dependency 'Firebase/AdMob'
   s.swift_version = '4.2'
 end

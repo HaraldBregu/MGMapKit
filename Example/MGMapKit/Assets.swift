@@ -81,15 +81,16 @@ extension MapKitAsset {
             font: MapFont(),
             image: MapImage(),
             color: MapColor(
-                backgroundView: .black,
                 navigationBar: .black,
-                navigationBarTint: .white,
+                navigationBarContent: .white,
+                searchBar: .black,
+                searchBarContent: .white,
                 toolBar: .black,
-                toolBarTint: .white),
+                toolBarContent: .white,
+                view: .black,
+                viewContent: .white),
             data: MapData(
-                items: items,
-                enableAds: false,
-                adsUnitId: ""))
+                items: items))
     }
 }
 
@@ -115,15 +116,16 @@ struct MapImage:MGMapImage {
 }
 
 struct MapColor:MGMapColor {
-    var backgroundView:UIColor
-    var navigationBar:UIColor
-    var navigationBarTint:UIColor
-    var toolBar:UIColor
-    var toolBarTint:UIColor
+    var navigationBar: UIColor
+    var navigationBarContent: UIColor
+    var searchBar: UIColor
+    var searchBarContent: UIColor
+    var toolBar: UIColor
+    var toolBarContent: UIColor
+    var view: UIColor
+    var viewContent: UIColor
 }
 
 struct MapData:MGMapData {
     var items: [MGMapDataItem]
-    var enableAds: Bool
-    var adsUnitId: String
 }
