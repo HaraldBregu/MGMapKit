@@ -94,7 +94,7 @@ extension MapKitAsset {
     }
 }
 
-struct MapAsset:MGMapAsset {
+struct MapAsset: MGMapAsset {
     var string: MGMapString
     var font: MGMapFont
     var image: MGMapImage
@@ -102,20 +102,20 @@ struct MapAsset:MGMapAsset {
     var data: MGMapData
 }
 
-struct MapString:MGMapString {
+struct MapString: MGMapString {
     var title:String
     var navigationTitle:String
 }
 
-struct MapFont:MGMapFont {
-
+struct MapFont: MGMapFont {
+    
 }
 
-struct MapImage:MGMapImage {
-
+struct MapImage: MGMapImage {
+    
 }
 
-struct MapColor:MGMapColor {
+struct MapColor: MGMapColor {
     var navigationBar: UIColor
     var navigationBarContent: UIColor
     var searchBar: UIColor
@@ -126,6 +126,6 @@ struct MapColor:MGMapColor {
     var viewContent: UIColor
 }
 
-struct MapData:MGMapData {
+struct MapData: MGMapData {
     var items: [MGMapDataItem]
 }
